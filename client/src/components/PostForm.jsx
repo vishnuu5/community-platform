@@ -8,7 +8,7 @@ function PostForm({ onCreatePost, isLoading, error }) {
         e.preventDefault()
         if (postText.trim()) {
             onCreatePost(postText)
-            setPostText("") // Clear the input after submission
+            setPostText("")
         }
     }
 

@@ -80,7 +80,7 @@ function App() {
             path="/admin-dashboard"
             element={user && user.role === "admin" ? <AdminDashboardPage currentUser={user} /> : <Navigate to="/" />}
           />
-          <Route path="/search" element={<SearchPage />} />
+          <Route path="/search" element={<SearchPage currentUser={user} />} />
           <Route path="*" element={<h1 className="text-2xl font-bold text-center">404 - Page Not Found</h1>} />
         </Routes>
       </main>

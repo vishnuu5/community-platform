@@ -90,9 +90,9 @@ function HomePage({ user }) {
     }
 
     return (
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto px-4 sm:px-0">
+            {" "}
             <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Home Feed</h1>
-
             {user ? (
                 <PostForm onCreatePost={handleCreatePost} isLoading={createPostLoading} error={createPostError} />
             ) : (
@@ -108,7 +108,6 @@ function HomePage({ user }) {
                     to create posts.
                 </p>
             )}
-
             {loadingPosts ? (
                 <div className="text-center text-gray-600">Loading posts...</div>
             ) : postError ? (

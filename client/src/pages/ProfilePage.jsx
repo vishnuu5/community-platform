@@ -1,4 +1,3 @@
-"use client"
 
 import { useState, useEffect, useCallback } from "react"
 import { useParams, useNavigate } from "react-router-dom"
@@ -100,17 +99,15 @@ function ProfilePage({ currentUser, userId }) {
     }
 
     return (
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto px-4 sm:px-0">
+            {" "}
             <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">
                 {currentUser && currentUser._id === profile._id ? "My Profile" : `${profile.name}'s Profile`}
             </h1>
-
             <ProfileCard profile={profile} currentUser={currentUser} />
-
             <h2 className="text-2xl font-bold text-gray-800 mb-6 mt-8">
                 {currentUser && currentUser._id === profile._id ? "My Posts" : `${profile.name}'s Posts`}
             </h2>
-
             {postsError ? (
                 <div className="text-center text-red-500">{postsError}</div>
             ) : posts.length === 0 ? (

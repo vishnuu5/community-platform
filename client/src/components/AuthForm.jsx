@@ -1,5 +1,6 @@
 
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 function AuthForm({ type, onSubmit, isLoading, error }) {
     const [name, setName] = useState("")
@@ -93,6 +94,24 @@ function AuthForm({ type, onSubmit, isLoading, error }) {
                 >
                     {isLoading ? "Loading..." : type === "register" ? "Register" : "Login"}
                 </button>
+            </div>
+
+            <div className="mt-6 text-center">
+                {type === "register" ? (
+                    <p className="text-gray-600">
+                        Already have an account?{" "}
+                        <Link to="/login" className="text-blue-600 hover:underline font-medium">
+                            Login here
+                        </Link>
+                    </p>
+                ) : (
+                    <p className="text-gray-600">
+                        Don't have an account?{" "}
+                        <Link to="/register" className="text-blue-600 hover:underline font-medium">
+                            Register here
+                        </Link>
+                    </p>
+                )}
             </div>
         </form>
     )

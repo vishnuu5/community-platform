@@ -1,6 +1,6 @@
 
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import AuthForm from "../components/AuthForm"
 
 function LoginPage({ onLogin }) {
@@ -38,17 +38,9 @@ function LoginPage({ onLogin }) {
     }
 
     return (
-        <div className="flex justify-center items-center min-h-[calc(100vh-80px)]">
+        <div className="flex justify-center items-center min-h-[calc(100vh-80px)] px-4">
             {" "}
             <AuthForm type="login" onSubmit={handleLoginSubmit} isLoading={isLoading} error={error} />
-            <div className="absolute bottom-8 text-center w-full">
-                <p className="text-gray-600">
-                    Don't have an account?{" "}
-                    <Link to="/register" className="text-blue-600 hover:underline font-medium">
-                        Register here
-                    </Link>
-                </p>
-            </div>
         </div>
     )
 }

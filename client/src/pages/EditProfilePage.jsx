@@ -42,7 +42,7 @@ function EditProfilePage({ currentUser, onProfileUpdate }) {
                 throw new Error(data.message || "Failed to update profile")
             }
 
-            onProfileUpdate(data) // Update user state in App.jsx and localStorage
+            onProfileUpdate(data)
             setSuccess("Profile updated successfully!")
             setTimeout(() => {
                 navigate("/my-profile")
@@ -55,12 +55,11 @@ function EditProfilePage({ currentUser, onProfileUpdate }) {
     }
 
     return (
-        <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+        <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md px-4 sm:px-8">
+            {" "}
             <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">Edit Profile</h1>
-
             {error && <p className="text-red-500 text-center mb-4">{error}</p>}
             {success && <p className="text-green-600 text-center mb-4">{success}</p>}
-
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
