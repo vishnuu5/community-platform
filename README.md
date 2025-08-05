@@ -160,5 +160,9 @@ db.users.updateOne({ email: "admin@example.com" }, { $set: { role: "admin" } });
 
 ---
 
-**GitHub Repo Link:** `https://github.com/vishnuu5/community-platform.git`
-**Live Demo URL:** `https://community-platform-vert.vercel.app`
+**GitHub Repo Link:**
+ [Click-here](https://github.com/vishnuu5/community-platform.git)
+
+
+**Live Demo URL:**
+ [Click-demo](https://community-platform-vert.vercel.app)
